@@ -1,0 +1,42 @@
+[package]
+ZeroMQ::Raw
+
+[lib]
+libzmq
+
+[defs]
+
+# version
+v zmq_version p p p
+
+# error handling
+i zmq_errno
+p zmq_strerror i
+
+# contexts
+p zmq_init i
+i zmq_term p
+
+# messages
+i zmq_msg_init p
+i zmq_msg_init_size p i
+i zmq_msg_init_data p p i p P
+i zmq_msg_close p
+p zmq_msg_data p
+i zmq_msg_size p
+i zmq_msg_copy p p
+i zmq_msg_move p p
+
+# sockets
+p zmq_socket p i
+i zmq_close p
+i zmq_getsockopt p i p p
+i zmq_setsockopt p i p i
+i zmq_bind p p
+i zmq_connect p p
+i zmq_send p p i
+i zmq_recv p p i
+
+# general
+i zmq_device i p p
+i zmq_poll p i l
