@@ -1,0 +1,16 @@
+$include_const 'ZeroMQ/Constants.pasm';
+
+function main[main](var argv) {
+  load_bytecode('ZeroMQ.pbc');
+
+  var ctx  = new ZeroMQ.Context();
+  var sock = ctx.socket(ZMQ_REP);
+  sock.bind("tcp://127.0.0.1:2468");
+
+  for (;;) {
+    var msg = new ZeroMQ.Message();
+    sock.recv(msg);
+    msg = new ZeroMQ.Message(string(msg) + " confirmed");
+    sock.send(msg);
+  }
+}
