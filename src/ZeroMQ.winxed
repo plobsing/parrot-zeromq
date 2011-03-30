@@ -2,7 +2,7 @@ $include_const 'datatypes.pasm';
 $include_const 'hash_key_type.pasm';
 $include_const 'ZeroMQ/Constants.pasm';
 
-function load[load]() {
+function load[anon,load]() {
   load_bytecode('ZeroMQ/Raw.pbc');
 }
 
