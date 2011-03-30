@@ -280,7 +280,7 @@ namespace ZeroMQ {
 
   function msg_data_buf_stash[anon,immediate]() {
     var ret = new 'Hash';
-    ret.set_key_type(Hash_key_type_PMC);
+    ret.set_key_type(Hash_key_type_PMC_ptr);
     return ret;
   }
 
