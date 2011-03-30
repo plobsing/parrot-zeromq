@@ -1,59 +1,10 @@
 $include_const 'datatypes.pasm';
 $include_const 'hash_key_type.pasm';
+$include_const 'ZeroMQ/Constants.pasm';
 
 function load[load]() {
   load_bytecode('ZeroMQ/Raw.pbc');
 }
-
-const int ZMQ_MAX_VSM_SIZE = 30;
-
-const int ZMQ_HAUSNUMERO  = 156384712,
-          ENOTSUP         = ZMQ_HAUSNUMERO + 1,
-          EPROTONOSUPPORT = ZMQ_HAUSNUMERO + 2,
-          ENOBUFS         = ZMQ_HAUSNUMERO + 3,
-          ENETDOWN        = ZMQ_HAUSNUMERO + 4,
-	  EADDRINUSE      = ZMQ_HAUSNUMERO + 5,
-	  EADDRNOTAVAIL   = ZMQ_HAUSNUMERO + 6,
-	  ECONNREFUSED    = ZMQ_HAUSNUMERO + 7,
-	  EINPROGRESS	  = ZMQ_HAUSNUMERO + 8,
-	  EMTHREAD	  = ZMQ_HAUSNUMERO + 50,
-	  EFSM	          = ZMQ_HAUSNUMERO + 51,
-	  ENOCOMPATPROTO  = ZMQ_HAUSNUMERO + 52,
-	  ETERM		  = ZMQ_HAUSNUMERO + 53;
-
-const int ZMQ_PAIR = 0,
-          ZMQ_PUB  = 1,
-          ZMQ_SUB  = 2,
-          ZMQ_REQ  = 3,
-          ZMQ_REP  = 4,
-          ZMQ_XREQ = 5,
-          ZMQ_XREP = 6,
-          ZMQ_PULL = 7,
-          ZMQ_PUSH = 8;
-
-const int ZMQ_HWM          = 1,
-          ZMQ_SWAP         = 3,
-          ZMQ_AFFINITY     = 4,
-          ZMQ_IDENTITY     = 5,
-          ZMQ_SUBSCRIBE    = 6,
-          ZMQ_UNSUBSCRIBE  = 7,
-          ZMQ_RATE         = 8,
-          ZMQ_RECOVERY_IVL = 9,
-          ZMQ_MCAST_LOOP   = 10,
-          ZMQ_SNDBUF       = 11,
-          ZMQ_RCVBUF       = 12,
-          ZMQ_RCVMORE      = 13;
-
-const int ZMQ_NOBLOCK = 1,
-	  ZMQ_SNDMORE = 2;
-
-const int ZMQ_POLLIN  = 1,
-	  ZMQ_POLLOUT = 2,
-	  ZMQ_POLLERR = 4;
-
-const int ZMQ_STREAMER  = 1,
-          ZMQ_FORWARDER = 2,
-          ZMQ_QUEUE     = 3;
 
 // errno to exception translation
 function zmq_err[anon](string name) {
