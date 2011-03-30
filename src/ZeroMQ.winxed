@@ -60,7 +60,7 @@ function stoa[anon](string s) {
 function stob[anon](string s) {
   var str_to_buf = dlfunc(null, 'Parrot_str_cstring', 'ppS');
   var buf        = str_to_buf(getinterp(), s);
-  var str_bytes  = dlfunc(null, 'Parrot_str_bytelength', 'ipS');
+  var str_bytes  = dlfunc(null, 'Parrot_str_byte_length', 'ipS');
   int bytes      = str_bytes(getinterp(), s);
   return buf, bytes;
 }
