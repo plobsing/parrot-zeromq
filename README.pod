@@ -7,12 +7,12 @@ ZeroMQ - ØMQ bindings for Parrot
 =head1 DESCRIPTION
 
 ØMQ is a library for fast, lightweight messaging. It allows for message-based
-concurrency at severl different levels: between threads, between processes, and between
+concurrency at several different levels: between threads, between processes, and between
 machines; in several common patterns, such as request/response, pub/sub, etc.
 
 =head2 Layout
 
-This library is broken up into three components which can be used independantly:
+This library is broken up into three components which can be used independently:
 
 =over
 
