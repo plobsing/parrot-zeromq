@@ -45,7 +45,8 @@ Peter Lobsinger
 Copyright (C) 2011, Peter Lobsinger.
 
 This library is free software, you can redistribute it and/or modify it under the
-terms of L<The Artistic License 2.0|http://www.perlfoundation.org/artistic_license_2_0>.
+terms of The Artistic License 2.0, obtainable at
+L<http://www.perlfoundation.org/artistic_license_2_0>.
 
 =cut
 
