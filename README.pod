@@ -1,0 +1,51 @@
+=encoding utf8
+
+=head1 NAME
+
+ZeroMQ - ØMQ bindings for Parrot
+
+=head1 DESCRIPTION
+
+ØMQ is a library for fast, lightweight messaging. It allows for message-based
+concurrency at severl different levels: between threads, between processes, and between
+machines; in several common patterns, such as request/response, pub/sub, etc.
+
+=head2 Layout
+
+This library is broken up into three components which can be used independantly:
+
+=over
+
+=item ZeroMQ::Raw
+
+The raw C<NCI> bindings for libzmq.
+
+=item ZeroMQ::Constants
+
+The constants for interacting with libzmq. Taken from zmq.h.
+
+=item ZeroMQ
+
+Object-oriented wrappers for libzmq. These follow the Winxed constructor convention.
+
+=back
+
+=head1 SEE ALSO
+
+L<http://zeromq.org>
+
+L<http://winxed.googlecode.com>
+
+=head1 AUTHOR
+
+Peter Lobsinger
+
+=head1 LICENSE
+
+Copyright (C) 2011, Peter Lobsinger.
+
+This library is free software, you can redistribute it and/or modify it under the
+terms of L<The Artistic License 2.0|http://www.perlfoundation.org/artistic_license_2_0>.
+
+=cut
+
