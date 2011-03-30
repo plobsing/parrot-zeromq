@@ -153,6 +153,7 @@ namespace ZeroMQ {
     }
 
     function connect(string addr) {
+      using static stoa;
       var addr_buf = stoa(addr);
       using ZeroMQ.Raw.zmq_connect;
       if (zmq_connect(self.ptr, addr_buf))
