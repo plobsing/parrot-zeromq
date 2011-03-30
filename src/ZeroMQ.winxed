@@ -102,7 +102,7 @@ namespace ZeroMQ {
       if (!has_i)
 	i = 1;
       using ZeroMQ.Raw.zmq_init;
-      if (!(self.ptr = zmq_init(i)))
+      if (null == (self.ptr = zmq_init(i)))
 	throw zmq_err('zmq_init');
     }
 
@@ -129,7 +129,7 @@ namespace ZeroMQ {
       if (!(ctx instanceof ZeroMQ.Context))
 	die("incorrect type");
       using ZeroMQ.Raw.zmq_socket;
-      if (!(self.ptr = zmq_socket(ctx.ptr, type)))
+      if (null == (self.ptr = zmq_socket(ctx.ptr, type)))
 	throw zmq_err('zmq_socket');
     }
 
